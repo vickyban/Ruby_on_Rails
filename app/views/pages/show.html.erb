@@ -1,0 +1,33 @@
+
+
+<h1>Pages#show</h1>
+<%= link_to "<< Back to List", pages_path %>
+
+<div class="pages show">
+<table>
+    <tr>
+        <th>Name</th>
+        <td><%= @page.name%></td>
+    </tr>
+    <tr>
+            <th>Visible</th>
+            <td><%= @page.visible ? "Yes" : "No" %></td>
+    </tr>
+    <tr>
+            <th>Subject</th>
+            <td><%= @page.subject_id %></td>
+    </tr>
+    <tr>
+            <th>Position</th>
+            <td><%= @page.position %></td>
+    </tr>
+    <tr>
+            <th>Created at</th>
+            <td><%= @page.created_at %></td>
+    </tr>
+    <tr>
+            <th>Update at</th>
+            <td><%= @page.updated_at %></td>
+    </tr>
+</table>
+</div>

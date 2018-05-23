@@ -1,0 +1,7 @@
+<h1>Sections#delete</h1>
+
+<p>You are about to delete a section </p>
+<%= form_for(@section, :url => section_path(@section), :method => 'delete') do |f| %>
+    <%= f.object.name %>
+    <%= f.submit("Delete section")%>
+<%end%>

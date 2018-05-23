@@ -1,0 +1,33 @@
+<h1>Sections#new</h1>
+<p>Find me in app/views/sections/new.html.erb</p>
+
+<%= form_for(@section) do |f| %>
+    <p>
+        <%= f.label(:name)%></br>
+        <%= f.text_field(:name)%>
+    </p>
+    <p>
+        <%= f.label(:page_id)%></br>
+        <%= f.text_field(:page_id)%>
+    </p>
+    <p>
+        <%= f.label(:position)%></br>
+        <%= f.text_field(:position)%>
+    </p>
+    <p>
+        <%= f.label(:visible)%></br>
+        <%= f.text_field(:visible)%>
+    </p>
+    <p>
+        <%= f.label(:content_type)%></br>
+        <%= f.text_field(:content_type)%>
+    </p>
+    <p>
+        <%= f.label(:content)%></br>
+        <%= f.text_field(:content)%>
+    </p>
+
+    <p>
+        <%= f.submit("Create section")%>
+    </p>
+<%end%>

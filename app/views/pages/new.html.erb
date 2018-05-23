@@ -1,0 +1,28 @@
+<h1>Pages#new</h1>
+
+<%= form_for(@page) do |f| %>
+    <p>
+        <%= f.label(:name)%><br>
+        <%= f.text_field(:name)%>
+    </p>
+    <p>
+        <%= f.label(:subject_id)%><br>
+        <%= f.text_field(:subject_id)%>
+    </p>
+    <p>
+        <%= f.label(:permalink)%><br>
+        <%= f.text_field(:permalink)%>
+    </p>
+    <p>
+        <%= f.label(:position)%><br>
+        <%= f.text_field(:position)%>
+    </p>
+    <p>
+        <%= f.label(:visible)%><br>
+        <%= f.text_field(:visible)%>
+    </p>
+
+    <div class="btn">
+        <%= f.submit("Create Page")%>
+    </div>
+<%end%>

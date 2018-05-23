@@ -1,0 +1,24 @@
+<h1>Sections#index</h1>
+<%= link_to "Create new Section" , new_section_path%>
+<div class="sections index">
+<table>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>visible</th>
+        <th>Action</th>
+    </tr>
+    <% @sections.each do |section| %>
+    <tr>
+        <td><%= section.id %></td>
+        <td><%= section.name %></td>
+        <td><%= status_tag(section.visible)%></td>
+        <td>
+            <%= link_to "Show", section_path(section) %>
+            <%= link_to "Edit", edit_section_path(section) %>
+            <%= link_to "Delete", delete_section_path(section) %>
+        </td>
+    </tr>    
+    <%end%>
+
+</table>

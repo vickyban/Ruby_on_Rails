@@ -1,0 +1,30 @@
+
+
+<h1>Pages#index</h1>
+
+
+<%= link_to "Create new Page", new_page_path %>
+<div class="pages index">
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Visible</th>
+            <th>Section</th>
+            <th>Actions</th>
+        </tr>
+        <% @pages.each do |page|%>
+        <tr>
+            <td><%= page.id %></td>
+            <td><%= page.name %></td>
+            <td><%= page.visible ? "Yes" : "No"%></td>
+            <td><%= page.sections.size %></td>
+            <td>
+                <%= link_to("Show", page_path(page)) %>
+                <%= link_to("Edit", edit_page_path(page)) %>
+                <%= link_to("Delete", delete_page_path(page)) %>
+            </td>
+        </tr>
+        <%end%>
+    </table>
+</div>

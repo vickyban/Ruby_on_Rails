@@ -1,0 +1,9 @@
+<h1>Pages#delete</h1>
+<p>You are about to delete a page</p>
+<%= form_for(@page, :url => page_path(@page), :method => "delete") do |f|%>
+    <span>Page's name: </span>
+    <%= f.object.name %>
+    <div class="btn">
+        <%= f.submit("Delete page")%>
+    </div>
+<%end%>
