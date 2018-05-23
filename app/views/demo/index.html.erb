@@ -5,3 +5,11 @@
 
 <%= link_to('Hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %><br />
 <%= link_to('Roar', '#', :onclick => "jsRoar('Javascript'); return true;") %>
+
+<%= form_for(@subject, :url => "#") do |f| %>
+    <%= f.label(:name) %><br>
+    <%= f.text_field(:name, :size => 40, :maxlength => 40) %><br>
+    <%= f.password_field(:password, :size => 40) %><br>
+    <%= f.hidden_field(:token, 'abcdef0123455789') %><br>
+    <%= f.text_area(:description, :size => "40x5")%>
+<%end%>

@@ -3,6 +3,7 @@ class DemoController < ApplicationController
   layout 'application'
 
   def index
+    @subject = Subject.new
     render('index')
   end
 
